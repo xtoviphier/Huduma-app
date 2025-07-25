@@ -100,22 +100,23 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getServiceProviders(categoryId?: string, location?: string): Promise<(ServiceProvider & { user: User; category: ServiceCategory })[]> {
-    let query = db
+    let whereConditions = [eq(serviceProviders.isActive, true)];
+
+    if (categoryId) {
+      whereConditions.push(eq(serviceProviders.categoryId, categoryId));
+    }
+
+    if (location) {
+      whereConditions.push(ilike(users.location, `%${location}%`));
+    }
+
+    const results = await db
       .select()
       .from(serviceProviders)
       .innerJoin(users, eq(serviceProviders.userId, users.id))
       .innerJoin(serviceCategories, eq(serviceProviders.categoryId, serviceCategories.id))
-      .where(eq(serviceProviders.isActive, true));
-
-    if (categoryId) {
-      query = query.where(eq(serviceProviders.categoryId, categoryId));
-    }
-
-    if (location) {
-      query = query.where(ilike(users.location, `%${location}%`));
-    }
-
-    const results = await query.orderBy(desc(serviceProviders.rating));
+      .where(whereConditions.length > 1 ? and(...whereConditions) : whereConditions[0])
+      .orderBy(desc(serviceProviders.rating));
     
     return results.map(result => ({
       ...result.service_providers,

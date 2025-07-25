@@ -48,7 +48,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ user });
     } catch (error) {
       console.error('Registration error:', error);
-      res.status(400).json({ message: 'Registration failed', error: error.message });
+      res.status(400).json({ message: 'Registration failed', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
@@ -64,7 +64,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ user });
     } catch (error) {
       console.error('Login error:', error);
-      res.status(500).json({ message: 'Login failed', error: error.message });
+      res.status(500).json({ message: 'Login failed', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
@@ -126,7 +126,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(provider);
     } catch (error) {
       console.error('Error creating provider:', error);
-      res.status(400).json({ message: 'Failed to create provider', error: error.message });
+      res.status(400).json({ message: 'Failed to create provider', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
@@ -159,7 +159,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(job);
     } catch (error) {
       console.error('Error creating job:', error);
-      res.status(400).json({ message: 'Failed to create job', error: error.message });
+      res.status(400).json({ message: 'Failed to create job', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
@@ -186,7 +186,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(job);
     } catch (error) {
       console.error('Error updating job:', error);
-      res.status(400).json({ message: 'Failed to update job', error: error.message });
+      res.status(400).json({ message: 'Failed to update job', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
@@ -216,7 +216,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(message);
     } catch (error) {
       console.error('Error sending message:', error);
-      res.status(400).json({ message: 'Failed to send message', error: error.message });
+      res.status(400).json({ message: 'Failed to send message', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
@@ -251,7 +251,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(review);
     } catch (error) {
       console.error('Error creating review:', error);
-      res.status(400).json({ message: 'Failed to create review', error: error.message });
+      res.status(400).json({ message: 'Failed to create review', error: error instanceof Error ? error.message : 'Unknown error' });
     }
   });
 
