@@ -1,0 +1,155 @@
+Understood! Here's the final comprehensive prompt exactly as you want it:
+
+```
+Build a local service marketplace mobile application called "Huduma" that connects skilled workers with customers in Mombasa. Use React Native for cross-platform mobile development with Node.js backend and Firebase database.
+
+CORE FEATURES:
+
+1. APPLICATION NAME & BRANDING:
+- Name: Huduma (Service in Swahili/Kiswahili)
+- Color Scheme: Kenyan flag colors (Black #000000, Red #DC143C, Green #006400, White #FFFFFF)
+- Logo: Incorporate lion, shield, and spear elements from Kenyan flag
+- Tagline: "Connecting You to Skilled Professionals" (English) / "Tunakupa Uhakika wa Wafanyakazi Wako" (Swahili)
+
+2. USER SYSTEM:
+- Two user types: Service Providers and Customers
+- Free registration for both
+- Profile requirements:
+  * Phone number (mandatory, SMS verification CAPTCHA)
+  * First and last name (mandatory)
+  * Years of experience (providers only, mandatory)
+  * Location (mandatory)
+  * Profile picture (optional for providers)
+- LANGUAGE TOGGLE: Swahili/Kiswahili and English (users can switch between both languages)
+
+3. SERVICE CATEGORIES:
+Plumbing, Electrical Work, Carpentry, Masonry/Bricklaying, Welding/Metal Work, Painting, Roofing, Tile/Flooring, Mobile Repair, Computer Repair, Tutoring, Car Wash, Carpet Wash, Dog Walking, Pet Vet, Internet Installation, Gardening, House Cleaning, Hairdressing, Laundry Services, Barber, Painter, Babysitter, Tattoo Artist
+
+4. MAP & LOCATION SYSTEM:
+- Google Maps integration with precise location sharing
+- Service provider icons on map showing nearby professionals
+- Customer can adjust search radius for providers
+- Real-time location tracking during jobs
+- Job status map: En route, Arrived, Working, Completed
+
+5. BOOKING & JOB SYSTEM:
+- Customer searches service → sees nearby providers by distance
+- Customer selects provider → sends job request
+- Provider must accept job before midnight of request day
+- Job status tracking (customer updates: Arrived, Working, Completed)
+- Cancellation notification to both parties with alternative suggestions
+- Direct in-app communication required (no external contact until job acceptance)
+
+6. COMMUNICATION SYSTEM:
+- Real-time chat with text and photo attachments
+- Private phone numbers (only visible after job acceptance)
+- Permanent chat history storage
+- Push notifications for all job updates
+
+7. PRICING & PAYMENT SYSTEM:
+- Providers set price ranges during registration
+- Exact pricing confirmed after job acceptance
+- Minimum service price: KES 200
+- Commission structure:
+  * 2% for KES 200-1,500
+  * 5% for KES 2,000-4,500
+  * 10% for KES 5,000-9,500
+  * 15% for KES 10,000-19,500
+  * 20% for KES 20,000-45,000
+  * 25% for KES 50,000-100,000
+- M-Pesa STK Push integration for in-app payments
+- Immediate payment release to provider after job completion
+- No external payment allowed (app-only transactions)
+
+8. RATING & REVIEW SYSTEM:
+- 5-star rating system (optional after service completion)
+- Written reviews section on provider profiles
+- Complaint handling through reviews and ratings
+- "Unreliable" reporting for no-show providers
+- Bad behavior reporting via customer support
+
+9. PROVIDER SUBSCRIPTION MODEL:
+- FREE TIER: 2 job connections per month (first 2 jobs free to try)
+- After 2 successful completions: KES 200/month for 10 connections
+- Standard: KES 500/month for 30 connections
+- Premium: KES 1,000/month unlimited connections
+- No payment required until after first 2 successful jobs
+
+10. ADDITIONAL FEATURES:
+- Favorites/Bookmarks for preferred providers
+- Service history for both users
+- Profile completion requirements enforced
+- Emergency reporting for no-show providers
+- Customer support: +254106986060 (Airtel)
+- Terms of service and liability disclaimer
+- Data retention: 24 days after account deletion
+
+11. TECHNICAL REQUIREMENTS:
+- Cross-platform: Android and iOS compatibility
+- Mobile-first responsive design
+- Google Maps API integration
+- M-Pesa Daraja API for payments
+- Firebase for real-time database and storage
+- SMS verification for CAPTCHA
+- Push notifications for all updates
+- Photo storage in cloud database
+- Regular automated backups
+- Offline capability for basic functions
+
+12. BUSINESS OPERATIONS:
+- Immediate payment processing
+- Commission automatically deducted
+- 24/7 customer support via phone
+- Word-of-mouth and door-to-door marketing
+- Full Mombasa coverage from launch
+- Beta testing with 50 users
+- No referral program initially
+
+13. SECURITY & PRIVACY:
+- Phone number privacy (hidden until job acceptance)
+- SMS verification for account security
+- Chat history permanence to prevent fraud
+- Data encryption
+- Terms of service agreement
+- GDPR/Kenya Data Protection compliance
+
+TECH STACK:
+Frontend: React Native (cross-platform mobile app)
+Backend: Node.js with Express
+Database: Firebase Realtime Database
+Authentication: Firebase Auth
+Payments: M-Pesa Daraja API (STK Push)
+Maps: Google Maps API
+Storage: Firebase Cloud Storage
+SMS: Twilio or Africa's Talking
+Hosting: Replit/Expo/Firebase Hosting
+
+KEY SCREENS:
+- Splash screen with lion/shield/spear logo
+- Language selection (Swahili/English)
+- User registration with SMS verification
+- Map view with nearby providers
+- Service category selection
+- Provider profiles with ratings/pricing
+- Job request and acceptance flow
+- Real-time chat interface
+- Job status tracking map
+- Payment processing screen
+- Rating and review submission
+- User dashboard (history, favorites, settings)
+- Provider subscription management
+- Customer support contact
+
+LAUNCH STRATEGY:
+- Full Mombasa coverage from day one
+- MVP ready ASAP
+- 50 beta testers through word-of-mouth
+- 100 initial providers through door-to-door recruitment
+- No external marketing initially
+
+Make it professional, trustworthy, and optimized for Kenyan mobile users. Focus on maximum usability and trust-building features. Ensure all payments go through the app only. Prioritize security and user verification. Create an intuitive interface that works seamlessly for both customers and service providers in BOTH English and Swahili.
+
+The app should be production-ready with clean code, proper error handling, and scalable architecture. Focus on the core MVP features first, with room for future expansion to include USSD, web version, and advanced features. All interface elements must be available in both English and Swahili with easy language switching.
+```
+
+This is your complete, final prompt ready for Replit's AI App Builder! 🚀
